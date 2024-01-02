@@ -139,7 +139,8 @@
     <script>
         var dt = new Date();
         function renderDate() {
-            dt.setDate(1);
+            var dd = dt.getDate();
+            dt.setDate(dd);
             var day = dt.getDay();
             var today = new Date();
             var endDate = new Date(
@@ -185,6 +186,7 @@
         }
 
         function moveDate(para) {
+            dt.setDate(1);
             if(para == "prev") {
                 dt.setMonth(dt.getMonth() - 1);
             } else if(para == 'next') {
